@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="d3.slider.css">
+  <!-- Javascript -->
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="main6.js"></script>
+  <script src="d3.slider.js"></script>
+</head>
+
+<body>
+  <div class="bgimg" style="padding:20px" align="right:5px">
+    <header>
+      <h1>Traffic Fatalities in USA</h1>
+      <h2>An Analysis of Year 2015</h2>
+    </header>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Story</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#" onclick="window.top.location.reload();">Intro</a></li>
+        <li><a class="next_text" href="#" onclick="story(1);">Severity of Accidents</a></li>
+        <li><a class="next_text" href="#" onclick="story(2);">Distribution over Months</a></li>
+        <li><a class="next_text" href="#" onclick="story(3);">Week Days</a></li>
+        <li><a class="next_text" href="#" onclick="story(4);">Day Time</a></li>
+        <li><a class="next_text" href="#" onclick="story(5);">Distribution over Ages</a></li>
+        <li><a class="next_text" href="#" onclick="story(6);">Spatial Analysis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-sm-1" class="left_column" style="background-color:white;"></div>
+    <div class="col-sm-10" style="background-color:white;">
+      <chart class="chart">
+        <h2 align="center">Introduction</h2>
+         <p>Every year the National Highway Traffic Safety Administration (NHTSA) releases
+          a massive set of data collected for each recorded vehicle crash in the
+          United States of America. NHTSA uses data from many sources, including
+          the Fatality Analysis Reporting System (FARS) which began operation in
+          1975. Providing data about fatal crashes involving all types of vehicles,
+          the FARS is used to identify highway safety problem areas, provide a basis
+          for regulatory and consumer information initiatives, and form the basis
+          for cost and benefit analyses of highway safety initiatives.
+          The data is made available for public and academic researches with the goal
+          of disclosing insights and connections inside the data. At the end it shall
+          increase awareness and decrease fatalities.
+          <br/>This data visualization shall give some introduction to the traffic
+          accident trends throughout year 2015.</p>
+        <p class="hint" align="center"><strong>Use above navigation bar to follow
+          the narration...</strong></p>
+      </chart>
+    </div>
+    <div class="col-sm-1" style="background-color:white;"></div>
+  </div>
+  <block class="block"><p></p></block>
+  <footer>Data set retrieved from Fatality Analysis Reporting System (FARS),
+    <a href="ftp://ftp.nhtsa.dot.gov/fars/">ftp://ftp.nhtsa.dot.gov/fars/</a></footer>
+  </div>
+  <script>
+    $(".nav a").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+/* style sheet for traffic_fatalities_us.html
+*/
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.chart {
+    text-align: left;
+    align-items: center;
+}
+
+p {
+  font-family: 'Helvetica';
+}
+
+header {font-family: 'Helvetica';color:white;}
+footer {font-family: 'Helvetica';font-size: 0.8em;background: lightgrey;color:black;text-align:center;}
+
+.bgimg {
+    background-image: url('traffic.png');
+    background-size: 100% 100%;
+    line-height: 75px;
+}
+
+h2 {
+  font-family: 'Helvetica';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+circle {
+  //fill: darkred;
+  //stroke: black;
+  //stroke-width: 0.7;
+  opacity: 0.1;
+  r: 1;
+}
+path {
+  fill: white;
+  stroke: lightgrey;
+  stroke-width : 1;
+}
+
+.place-label {
+  fill: black;
+  fill-opacity: 1;
+  font-size: .8em;
+  font-family: 'Helvetica'
+  font-weight: 400;
+  text-anchor: end;
+}
+
+.hidden {
+  display: none;
+}
+
+// zoom features
+.feature {
+  fill: #ccc;
+  cursor: pointer;
+}
+
+.feature.active {
+  fill: #deebf7;
+}
+
+.mesh {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+path:hover {
+  fill: lightgrey;
+}
+
+.tick line{
+  opacity: 0.2;
+  stroke: black;
+}
+
+div.selector_buttons {
+  position: flexible;
+  top: 400px;
+  left: 500px;
+}
+
+div.selector_buttons div {
+  background-color: #F8F8F8;
+  font-size: 12px;
+  font-family: 'Helvetica';
+  font-weight:normal;
+  padding: 3px;
+  margin: 7px;
+}
+
+rect.bar {
+  fill: lightgrey;
+}
+
+rect.bar:hover {
+  fill: darkred;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+
+.next_text, .back_text, #text-story {
+  font-family: 'Helvetica';
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  border:0;
+}
+text {
+  font-family: 'Helvetica';
+  font-size: 12px;
+}
+
+div.tooltip {
+    position: absolute;
+    top: -5px;
+    text-align: left;
+    width: 200px;
+    padding: 5px;
+    font: 12px Helvetica;
+    color: white;
+    background: black;
+    border: 1px;
+    border-radius: 2px;
+    pointer-events: none;
+    transition: opacity 1s !important;
+    opacity: 0.9 !important;
+}
+div.tooltip:hover {
+    opacity: 1 !important;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
